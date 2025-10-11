@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+body {
+  width: 100%;
+  overflow: auto;
+}
+.entering_info {
+  min-width: 50vw;
+  margin: 2%;
+  display: flex;
+  justify-content: center;
+}
+#THUMBNAIL {
+  display: none;
+}
+.preview p {
+  margin: 20px;
+  border-radius: 200px;
+  padding: 8px;
+}
+form {
+  background: #cccccc;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid black;
+  text-align: center;
+}
+form ol {
+  padding-left: 0;
+}
+form li,
+div>p {
+  background: #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  list-style-type: none;
+  border: 1px solid black;
+}
+form img {
+  height: 64px;
+  order: 1;
+}
+form p {
+  line-height: 32px;
+  padding-left: 10px;
+}
+form label,
+form button {
+  background-color: #7f9ccb;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px ridge black;
+  font-size: 0.8rem;
+  height: auto;
+  transition: transform 0.2s ease-out;
+}
+form button {
+  margin: 18px;
+}
+form label:hover,
+form button:hover {
+  background-color: #2d5ba3;
+  color: white;
+  transform: translateY(-2px) scale(1.05);
+}
+form label:active,
+form button:active {
+  background-color: #0d3f8f;
+  color: white;
+}
+form input { 
+  margin: 8px;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+}
+form input:focus {
+  border: 2px solid #0d3f8f;
+  outline: none;
+  box-shadow: 0 0 5px rgba(108, 99, 255, 0.3);
+}
+.card {
+  background-color: #252525;
+  height: 20vh; 
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  gap: 4%;
+  margin: 10px;
+}
+.hidden{
+  visibility: hidden;
+}
+.thumb {
+  width: 40%;
+  width: 40vh;
+  height: 100%;
+  position: relative; 
+}
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+#oduration {
+  font-size: smaller;
+  font-weight: lighter;
+  background-color: #686868c5;
+  border-radius: 4px;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+}
+.texts {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  gap: 10px;
+  width: 60%;
+  height: 100%;
+}
+#otitle {
+  font-size: 22px;
+  font-weight: bold; 
+}
+.details {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: lighter;
+  color: #ccc;
+}
+.card:hover {
+  background-color: #333;
+  cursor: pointer;
+}

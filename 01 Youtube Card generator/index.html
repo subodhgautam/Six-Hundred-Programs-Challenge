@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STYLED</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+</head>
+
+<body>
+    <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif; " >Youtube Card Generator.</h1>
+    <div class="entering_info">
+        <form method="post" enctype="multipart/form-data" id="form">
+            <div>
+                <label for="THUMBNAIL">Choose THUMBNAIL to upload (PNG, JPG)</label>
+                <input type="file" id="THUMBNAIL" name="THUMBNAIL" accept=".jpg, .jpeg, .png" required />
+            </div>
+            <div class="preview">
+                <p>No files currently selected for upload</p>
+            </div>
+            <div id="Title">
+                <input type="text" id="title" placeholder="Video Title" required>
+            </div>
+            <div id="time">
+                <input type="text" id="duration" placeholder="HH:MM:SS or MM:SS eg,12:21"
+                    pattern="^^(\d{1,2}:)?[0-5]\d:[0-5]\d" required>
+            </div>
+            <div id="channel_name">
+                <input type="text" id="channel" placeholder="Channel Name" required>
+            </div>
+            <div id="watch">
+                <input type="number" id="views" placeholder="Total Views" required>
+            </div>
+            <div id="date">
+                <input type="date" id="uploaded" placeholder="Date of upload. YYYY/MM/DD" required>
+            </div>
+            <div><button id="generate" type="button">GENERATE</button></div>
+        </form>
+    </div>
+    <div class="card hidden">
+        <div class="thumb">
+            <img src="#" alt="THUMBNAIL" id="oimage">
+            <span id="oduration">duration</span>
+        </div>
+        <div class="texts">
+            <div id="otitle">Title</div>
+            <div class="details">
+                <span id="ochannel">channel</span>
+                <span> • </span>
+                <span id="oviews">views</span>
+                <span> • </span>
+                <span id="otime">time</span>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -221,6 +221,7 @@ document.getElementById("generate").addEventListener("click", (e) => {
     o.date.textContent = getFormattedDate(video.date);
   card.classList.remove("hidden");
     document.getElementById("form").reset()
-    toastr.success("Success Message", "TITLE")
+    // toastr.success("Success Message", "TITLE")
+    toastr.success("Youtube Card Generated Successfully!", "SUCCESS")
   }  
 });

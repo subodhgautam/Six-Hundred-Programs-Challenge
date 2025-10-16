@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -82,7 +82,167 @@ form input:focus {
   border: 2px solid #0d3f8f;
   outline: none;
   box-shadow: 0 0 5px rgba(108, 99, 255, 0.3);
+} */
+
+
+
+
+/* --- Enhanced CSS by Gemini --- */
+
+/* 1. MODERN RESET & GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding doesn't affect final dimensions */
 }
+
+:root {
+    /* Define a modern color palette for easy changes */
+    --background-color: #f4f7f9;
+    --form-background: #ffffff;
+    --primary-accent: #6d5edc; /* A nice purple */
+    --primary-accent-dark: #5b4ab9;
+    --text-color: #333;
+    --border-color: #dbe2e8;
+    --placeholder-color: #99a3ad;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    width: 100%;
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: grid; /* Use grid to easily center content */
+    place-items: center;
+    padding: 2rem 1rem; /* Add some padding for smaller screens */
+}
+
+/* 2. FORM CONTAINER & LAYOUT */
+.entering_info {
+    min-width: auto; /* Remove fixed width to be responsive */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    background: var(--form-background);
+    width: 100%;
+    max-width: 500px; /* Set a max-width for better readability */
+    padding: 2.5rem; /* More generous padding */
+    border: 1px solid var(--border-color);
+    border-radius: 16px; /* Modern rounded corners */
+    box-shadow: var(--shadow);
+    text-align: center;
+    display: grid; /* Use grid for clean internal layout */
+    gap: 1.25rem; /* Space out all form elements evenly */
+}
+
+/* We can't change the HTML, but ideally this would not be an inline style */
+h1 {
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+/* 3. INPUTS & TEXT FIELDS */
+form input {
+    width: 100%;
+    margin: 0; /* Remove default margin */
+    padding: 14px 20px;
+    border-radius: 8px; /* Slightly less rounded for a modern look */
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: all 0.2s ease-in-out;
+}
+
+form input::placeholder {
+    color: var(--placeholder-color);
+}
+
+form input:focus {
+    outline: none;
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 3px rgba(109, 94, 220, 0.2); /* Soft glow on focus */
+}
+
+/* 4. BUTTONS & FILE UPLOAD */
+#THUMBNAIL {
+    display: none; /* Keep the actual file input hidden */
+}
+
+/* Style the file upload label like a button */
+form label {
+    display: block; /* Make it a block to fill space */
+    cursor: pointer;
+    background-color: var(--form-background);
+    color: var(--primary-accent);
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px dashed var(--border-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+form label:hover {
+    background-color: #f8f6ff;
+    border-color: var(--primary-accent);
+}
+
+.preview p {
+    margin: 0;
+    padding: 12px;
+    border-radius: 8px;
+    background: #f4f7f9;
+    color: #6c757d;
+    font-size: 0.9rem;
+    border: none;
+}
+
+/* Main "GENERATE" button */
+form button {
+    background-color: var(--primary-accent);
+    color: white;
+    padding: 16px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+form button:hover {
+    background-color: var(--primary-accent-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form button:active {
+    background-color: var(--primary-accent-dark);
+    transform: translateY(-1px);
+}
+
+/* Remove unused styles to keep the code clean */
+form ol, form li, div > p {
+    /* These old styles are no longer needed */
+    padding-left: 0;
+    background: none;
+    display: block; /* Reset from flex */
+    justify-content: none;
+    margin-bottom: 0;
+    list-style-type: none;
+    border: none;
+}
+form img, form p {
+    /* These old styles are not applicable or overridden */
+}
+
+
 .card {
   background-color: #252525;
   height: 20vh; 
@@ -110,7 +270,8 @@ form input:focus {
 #oduration {
   font-size: smaller;
   font-weight: lighter;
-  background-color: #686868c5;
+  /* background-color: #686868c5; */
+  background-color: #343434c5;
   border-radius: 4px;
   padding: 3px;
   display: flex;
